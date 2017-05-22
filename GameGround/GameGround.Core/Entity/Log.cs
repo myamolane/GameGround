@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Utility;
 
-namespace Beian.Entity
+namespace GameGround.Entity
 {
     public class Log : IdentityEntity
     {
@@ -22,7 +22,7 @@ namespace Beian.Entity
     }
 }
 
-namespace Beian.Entity.Mapping
+namespace GameGround.Entity.Mapping
 {
     public class LogMap : IdentityKeyEntityMap<Log>
     {

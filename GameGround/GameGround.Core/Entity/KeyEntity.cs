@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using Repository.Pattern.Infrastructure;
 
-namespace Beian.Entity
+namespace GameGround.Entity
 {
     public abstract class IdentityEntity : Repository.Pattern.Ef6.Entity
     {
@@ -14,7 +14,7 @@ namespace Beian.Entity
     }
 }
 
-namespace Beian.Entity.Mapping
+namespace GameGround.Entity.Mapping
 {
     public abstract class KeyEntityMap<T> : EntityTypeConfiguration<T>
             where T : IdentityEntity

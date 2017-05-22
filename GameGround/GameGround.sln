@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGround.Portal", "GameGround\GameGround.Portal.csproj", "{897C3682-F23D-4660-BE6A-89491DBD5B04}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGround.Infrastructure", "GameGround.Infrastructure\GameGround.Infrastructure.csproj", "{4EFC95D6-7EC0-42C1-996C-F71FED51B240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGround.Core", "GameGround.Core\GameGround.Core.csproj", "{95F77C94-5192-47F8-B4B9-2CA49318A00B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGround.Tests", "GameGround.Tests\GameGround.Tests.csproj", "{28247163-219F-4367-8763-24AA5A58174D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{95F77C94-5192-47F8-B4B9-2CA49318A00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95F77C94-5192-47F8-B4B9-2CA49318A00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95F77C94-5192-47F8-B4B9-2CA49318A00B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28247163-219F-4367-8763-24AA5A58174D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28247163-219F-4367-8763-24AA5A58174D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28247163-219F-4367-8763-24AA5A58174D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28247163-219F-4367-8763-24AA5A58174D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,5 +63,6 @@ Global
 		{DB98892C-1C9D-49C0-9DF8-A4E187429D2C} = {E75E8903-5240-4FE8-8FD4-9BC4503FE550}
 		{4EFC95D6-7EC0-42C1-996C-F71FED51B240} = {7694C73F-552D-40A9-A2E0-A36C9BEC7E1F}
 		{95F77C94-5192-47F8-B4B9-2CA49318A00B} = {7694C73F-552D-40A9-A2E0-A36C9BEC7E1F}
+		{28247163-219F-4367-8763-24AA5A58174D} = {81F72BE6-AE1A-4A0D-A2D1-0A69D8B2DAB3}
 	EndGlobalSection
 EndGlobal
