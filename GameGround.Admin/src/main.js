@@ -3,9 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import babelpolyfill from 'babel-polyfill'
+import ElementUI from 'element-ui'
+import './assets/theme/theme-darkyellow/index.css'
+import Vuex from 'vuex'
 
 Vue.config.productionTip = false
 
+Vue.use(ElementUI)
+Vue.use(router)
+Vue.use(Vuex)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

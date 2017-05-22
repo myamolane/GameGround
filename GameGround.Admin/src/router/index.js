@@ -9,7 +9,7 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      component: resolve => require(['../views/Home'], resolve)
     }
   ]
 })

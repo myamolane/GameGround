@@ -1,0 +1,13 @@
+# Logs
+logs
+*.log
+TestResults/*
+
+# Compiled binary addons
+bin/
+obj/
+
+# Dependency directory
+packages/*
+.vs/*
+files
