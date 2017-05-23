@@ -1,13 +1,13 @@
 # Logs
 logs
 *.log
-TestResults/*
+GameGround/TestResults/*
 
 # Compiled binary addons
 bin/
 obj/
 
 # Dependency directory
-packages/*
-.vs/*
+GameGround/packages/*
+GameGround/.vs/*
 files

@@ -1,9 +1,10 @@
-﻿namespace GameGround.Infrastructure
+﻿using GameGround.Entity;
+using GameGround.Entity.Mapping;
+using System;
+using System.Data.Entity;
+using System.Linq;
+namespace GameGround.Infrastructure
 {
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
-
     public class GGContext : DbContext
     {
         //您的上下文已配置为从您的应用程序的配置文件(App.config 或 Web.config)
@@ -15,14 +16,28 @@
         public GGContext()
             : base("name=GGContext")
         {
+
         }
 
         //为您要在模型中包含的每种实体类型都添加 DbSet。有关配置和使用 Code First  模型
         //的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=390109。
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-    }
+        public DbSet<Log> Logs { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Configurations.Add(new LogMap());
+        }
+
+        static GGContext()
+        {
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<GGContext,>)
+        }
+    }
+    
     //public class MyEntity
     //{
     //    public int Id { get; set; }
