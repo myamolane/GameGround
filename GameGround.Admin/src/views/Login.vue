@@ -6,7 +6,7 @@
         </el-col>
         <el-col :xs="14" :sm="12" :md="10" :lg="8">
             <h1>
-                <router-link to="NiceToMeetU">Join in</router-link>
+                <router-link to="NiceToMeetU">Join us</router-link>
                 <br/>
                 &
                 <br/>
@@ -34,7 +34,7 @@
         </el-col>
         </el-row>
         <el-row>
-        <i>Press enter to enter in</i>>  
+        <i>Press enter to enter in</i>  
         </el-row>
         
  </div>
