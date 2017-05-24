@@ -7,7 +7,7 @@ import babelpolyfill from 'babel-polyfill'
 import ElementUI from 'element-ui'
 import './assets/theme/theme-darkyellow/index.css'
 import Vuex from 'vuex'
-
+import './assets/css/common.scss'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)

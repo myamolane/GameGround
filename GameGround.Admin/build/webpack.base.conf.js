@@ -1,3 +1,6 @@
+var WarnCaseSensitiveModulesPlugin = require('webpack/lib/WarnCaseSensitiveModulesPlugin');
+WarnCaseSensitiveModulesPlugin.prototype.apply = function () { };
+
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
