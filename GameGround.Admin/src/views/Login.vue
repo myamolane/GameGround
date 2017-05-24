@@ -6,7 +6,7 @@
         </el-col>
         <el-col :xs="14" :sm="12" :md="10" :lg="8">
             <h1>
-                <router-link to="NiceToMeetU">Join us</router-link>
+                <router-link to="NiceToMeetU">Join in</router-link>
                 <br/>
                 &
                 <br/>
