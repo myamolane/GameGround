@@ -15,13 +15,11 @@ export default new Router({
       path: '/',
       name: '登录',
       component: resolve => require(['../views/Login'], resolve),
-      children: [
-          {
-            path: '/NiceToMeetU',
-            name: '注册',
-            component: resolve => require(['../views/Register'], resolve)
-      }
-      ]
+    },
+    {
+      path: '/NiceToMeetU',
+      name: '注册',
+      component: resolve => require(['../views/Register'], resolve)
     }
   ]
 })
