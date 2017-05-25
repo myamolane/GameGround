@@ -65,8 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entity\Account.cs" />
+    <Compile Include="Entity\Game.cs" />
     <Compile Include="Entity\KeyEntity.cs" />
     <Compile Include="Entity\Log.cs" />
+    <Compile Include="Entity\GameRecord.cs" />
+    <Compile Include="Entity\Player.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

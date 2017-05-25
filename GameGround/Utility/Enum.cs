@@ -10,5 +10,8 @@ namespace Utility
     {
         
     }
-
+    public enum Sex
+    {
+        
+    }
 }
