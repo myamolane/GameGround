@@ -2,13 +2,13 @@
     <div class="page-content">
     <el-form :model="registerForm" :rules="register" ref="registerForm" label-width="100px" class="demo-ruleForm">
         <el-form-item label="昵称" prop="userName" class="form-item">
-            <el-input v-model="registerForm.userName" auto-complete="off" class="userName input-item"></el-input>
+            <el-input v-model="registerForm.userName" placeholder="请输入昵称" auto-complete="off" class="input-item"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="pass" class="form-item">
-            <el-input type="password" v-model="registerForm.pass" auto-complete="off" class="input-item"></el-input>
+            <el-input type="password" v-model="registerForm.pass" placeholder="请输入密码" auto-complete="off" class="input-item"></el-input>
         </el-form-item>
         <el-form-item label="确认密码" prop="checkPass" class="form-item">
-            <el-input type="password" v-model="registerForm.checkPass" auto-complete="off" class="input-item"></el-input>
+            <el-input type="password" v-model="registerForm.checkPass" placeholder="请确认密码" auto-complete="off" class="input-item"></el-input>
         </el-form-item>
         <el-form-item label="性别" prop="sex" class="form-item">
             <el-radio-group v-model="registerForm.sex">
@@ -20,7 +20,7 @@
             <el-date-picker type="date" placeholder="选择日期" v-model="registerForm.birthday" auto-complete="off" class="input-item"></el-date-picker>
         </el-form-item>
         <el-form-item label="手机号码" prop="phoneNum" class="form-item">
-            <el-input v-model.number="registerForm.phoneNum" auto-complete="off" class="input-item"></el-input>
+            <el-input v-model.number="registerForm.phoneNum" placeholder="请输入手机号" auto-complete="off" class="input-item"></el-input>
         </el-form-item>
         <el-form-item class="form-item">
             <el-button type="primary" @click="submitForm('registerForm')" class="button-item">提交</el-button>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+    import Vue from 'vue'
     export default {
         data() {
             var checkuserName = (rule, value, callback) => {
