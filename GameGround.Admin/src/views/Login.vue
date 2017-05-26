@@ -48,9 +48,10 @@
         methods:{
             handleKeyUp(){
                 if (event.key==="Enter")
-                    this.$router.push('GameGround')
-
-
+                {   
+                     
+                    this.$router.push('GameGround')            
+                }
             },
             handleClick(){
                 alert("click");
