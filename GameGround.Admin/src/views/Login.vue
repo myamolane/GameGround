@@ -61,8 +61,6 @@
                     this.$router.push('GameGround')
                     this.test(this.message)         
                 }
-
-
             },
             handleClick(){
                 alert("click");
