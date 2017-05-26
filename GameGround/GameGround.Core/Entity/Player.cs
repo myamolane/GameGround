@@ -17,9 +17,7 @@ namespace GameGround.Entity
 
         public virtual Account Account { get; set; }
 
-        //public virtual ICollection<Player> friends { get; set; }
-
-        public virtual ICollection<GameRecord> GameRecords { get; set; }
+        public virtual List<GameRecord> GameRecords { get; set; }
         
         public virtual List<Game> CollectedGames { get; set; }
 
@@ -38,7 +36,6 @@ namespace GameGround.Entity.Mapping
 
             this.HasMany(m => m.GameRecords).WithRequired(m => m.Player).WillCascadeOnDelete(false);
             this.Property(m => m.Name).IsRequired().HasMaxLength(50);
-            //this.HasOptional(m => m.Account).WithRequired(m => m.Player).WillCascadeOnDelete(true);
 
             this.HasMany(m => m.CollectedGames)
                 .WithMany(m => m.CollecttingPlayers)
@@ -55,16 +52,9 @@ namespace GameGround.Entity.Mapping
                 {
                     table.MapLeftKey("GameId");
                     table.MapRightKey("PlayerId");
-                    table.ToTable("CollectGame");
+                    table.ToTable("HeartGame");
                 });
-            //this.HasMany(m => m.friends)
-            //    .WithMany(m => m.friends)
-            //    .Map(table =>
-            //            {
-            //                table.MapLeftKey("Player1_Id");
-            //                table.MapRightKey("Player2_Id");
-            //                table.ToTable("Friends");
-            //            });
+            
         }
     }
 }

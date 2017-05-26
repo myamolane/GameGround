@@ -14,8 +14,8 @@ Vue.http.options.xhr = {
 //MIME(Multipurpose Internet Mail Extensions)
 Vue.http.options.emulateJSON = true
 //拦截器
-Vue.http.interceptors.push((request, next) => {
-  request.headers = request.headers || {}
+// Vue.http.interceptors.push((request, next) => {
+  // request.headers = request.headers || {}
   //let token = localStorage.getItem('token')
   //request.headers.set('Authorization', 'Bearer ' + token)
   //request.headers.set('Accept', 'application/json')
@@ -28,6 +28,7 @@ Vue.http.interceptors.push((request, next) => {
     
 //     return response
 //   })
+    
 })
 
 export default Vue

@@ -15,12 +15,12 @@ namespace GameGround.Api
             
             // e.g. container.RegisterType<ITestService, TestService>();
             
+
+
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
 
             //container
             //  .RegisteType()
-
-            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }
 
         public static T GetService<T>()

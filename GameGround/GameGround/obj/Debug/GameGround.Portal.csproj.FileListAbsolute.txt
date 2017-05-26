@@ -94,3 +94,4 @@ C:\WorkSpace\GameGround\GameGround\GameGround\bin\zh-Hans\System.Web.WebPages.De
 C:\WorkSpace\GameGround\GameGround\GameGround\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 C:\WorkSpace\GameGround\GameGround\GameGround\obj\Debug\GameGround.dll
 C:\WorkSpace\GameGround\GameGround\GameGround\obj\Debug\GameGround.pdb
+C:\WorkSpace\GameGround\GameGround\GameGround\obj\Debug\GameGround.Portal.csprojResolveAssemblyReference.cache

@@ -41,14 +41,26 @@
 </template> 
 <script>
     import Vue from 'vue'
+    import {mapGetters, mapActions, mapState} from 'vuex'
     export default {
         mounted(){
             document.onkeyup=this.handleKeyUp;
         },
+        computed: {
+            ...mapGetters({
+                message:'message'
+            })
+        }
         methods:{
+            ...mapActions({
+                test: 'test'
+            }),
             handleKeyUp(){
                 if (event.key==="Enter")
+                {
                     this.$router.push('GameGround')
+                    this.test(this.message)         
+                }
 
 
             },

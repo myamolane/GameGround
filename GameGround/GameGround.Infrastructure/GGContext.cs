@@ -22,7 +22,7 @@ namespace GameGround.Infrastructure
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<GameRecord> GameRecords { get; set; }
-        //public DbSet<HeartGame> HeartGames { get; set; }
+        public DbSet<HeartGame> HeartGames { get; set; }
         public DbSet<Player> Players { get; set; }
         //为您要在模型中包含的每种实体类型都添加 DbSet。有关配置和使用 Code First  模型
         //的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=390109。
@@ -34,9 +34,9 @@ namespace GameGround.Infrastructure
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Configurations.Add(new AccountMap());
-            //modelBuilder.Configurations.Add(new GameMap());
+            modelBuilder.Configurations.Add(new GameMap());
             modelBuilder.Configurations.Add(new GameRecordMap());
-            //modelBuilder.Configurations.Add(new HeartGameMap());
+            modelBuilder.Configurations.Add(new HeartGameMap());
             modelBuilder.Configurations.Add(new PlayerMap());
         }
 

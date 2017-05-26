@@ -6,13 +6,14 @@ using System.Web.Mvc;
 
 namespace GameGround.Api.Controllers
 {
+    [RoutePrefix("api/test")]
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
             return View();
         }
-
+        [HttpGet,Route("get")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
