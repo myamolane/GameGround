@@ -29,6 +29,6 @@ Vue.http.options.emulateJSON = true
 //     return response
 //   })
     
-})
+// })
 
 export default Vue

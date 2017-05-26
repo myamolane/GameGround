@@ -50,16 +50,20 @@
             ...mapGetters({
                 message:'message'
             })
-        }
+        },
         methods:{
             ...mapActions({
-                test: 'test'
+                test: 'test',
+                test1:'test1'
             }),
             handleKeyUp(){
                 if (event.key==="Enter")
                 {
+                    alert("test")
+                    this.test1()
+                    alert(this.message)      
                     this.$router.push('GameGround')
-                    this.test(this.message)         
+                       
                 }
             },
             handleClick(){

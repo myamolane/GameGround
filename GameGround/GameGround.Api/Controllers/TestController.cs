@@ -7,12 +7,13 @@ using System.Web.Mvc;
 namespace GameGround.Api.Controllers
 {
     [RoutePrefix("api/test")]
-    public class HomeController : Controller
+    public class TestController : Controller
     {
         public ActionResult Index()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpGet,Route("get")]
         public ActionResult About()
         {
