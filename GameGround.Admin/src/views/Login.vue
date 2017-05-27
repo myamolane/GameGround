@@ -53,15 +53,13 @@
         },
         methods:{
             ...mapActions({
-                test: 'test',
-                test1:'test1'
+                test: 'test'
             }),
             handleKeyUp(){
                 if (event.key==="Enter")
                 {
                     alert("test")
-                    this.test1()
-                    alert(this.message)      
+                    this.test()
                     this.$router.push('GameGround')
                        
                 }

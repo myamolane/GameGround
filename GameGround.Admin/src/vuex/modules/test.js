@@ -1,8 +1,8 @@
 import api from 'src/api'
-import routes from 'src/routes'
+import routes from 'src/router'
 import * as types from '../types'
 const state={
-    message:''
+    message:'message'
 }
 const getters = {
     message: state => state.message
@@ -14,21 +14,19 @@ const mutations = {
 }
 const actions = {
     test({state,commit}){
-        alert("actions")
-        api.test().then(response=>{
-            if (response && response.body && response.body.success){
-                message='success';
-            }
-        })
-    },
-    test1({state,commit}){
-        //alert("actions")
         commit(types.COMMON_LOADING,true)
-        api.firstTest().then(response=>{
+        api.test().then(response=>{
             commit(types.COMMON_LOADING,false)
             if (response && response.body && response.body.success){
                 commit(types.TESTED,"success")
             }
         })
     }
+}
+
+export default{
+    state,
+    mutations,
+    getters,
+    actions
 }

@@ -8,6 +8,7 @@ import ElementUI from 'element-ui'
 import './assets/theme/theme-darkyellow/index.css'
 import Vuex from 'vuex'
 import './assets/css/common.scss'
+import store from './vuex/store'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
@@ -17,6 +18,7 @@ Vue.use(Vuex)
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

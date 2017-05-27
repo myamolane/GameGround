@@ -108,6 +108,7 @@ C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\bin\zh
 C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
 C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\bin\zh-Hans\System.Web.Http.resources.dll
 C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
-C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\obj\Debug\GameGround.Api.csprojResolveAssemblyReference.cache
 C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\obj\Debug\GameGround.Api.dll
 C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\obj\Debug\GameGround.Api.pdb
+C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\code\myamo\GameGround\GameGround\GameGround\GameGround.Api\bin\Microsoft.Owin.Host.SystemWeb.xml

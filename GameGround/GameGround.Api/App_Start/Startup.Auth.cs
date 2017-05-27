@@ -17,7 +17,9 @@ namespace GameGround.Api
         public void ConfigureAuth(IAppBuilder app)
         {
             // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=316888
-            
+            UnityConfig.RegisterComponents();
+
+            app.UseOAuthBearerAuthentication(OAuthOptions);
         }
     }
 }

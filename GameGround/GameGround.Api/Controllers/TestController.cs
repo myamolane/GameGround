@@ -2,31 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Http;
 
 namespace GameGround.Api.Controllers
 {
+    [AllowAnonymous]
     [RoutePrefix("api/test")]
-    public class TestController : Controller
+    public class TestController : ApiController
     {
-        public ActionResult Index()
+        [HttpGet]
+        public Metadata<string> Index()
         {
-            return View();
+            return new Metadata<string>("From TestController");
         }
-        [AllowAnonymous]
-        [HttpGet,Route("get")]
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        
+        
     }
 }

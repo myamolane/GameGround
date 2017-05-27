@@ -1,6 +1,6 @@
 import * as types from '../types'
 import api from 'src/api'
-import routes from 'src/routes'
+import routes from 'src/router'
 
 const state={
     loading:false
