@@ -2,4 +2,14 @@ C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Utility.dll
 C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Utility.pdb
 C:\WorkSpace\GameGround\GameGround\Utility\obj\Debug\Utility.dll
 C:\WorkSpace\GameGround\GameGround\Utility\obj\Debug\Utility.pdb
-C:\WorkSpace\GameGround\GameGround\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.Unity.dll
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.Unity.xml
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\FluentValidation.dll
+C:\WorkSpace\GameGround\GameGround\Utility\bin\Debug\FluentValidation.xml

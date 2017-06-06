@@ -7,14 +7,33 @@ import babelpolyfill from 'babel-polyfill'
 import ElementUI from 'element-ui'
 import './assets/theme/theme-darkyellow/index.css'
 import Vuex from 'vuex'
+import VueRouter from 'vue-router'
 import './assets/css/common.scss'
 import store from './vuex/store'
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 Vue.use(router)
 Vue.use(Vuex)
 /* eslint-disable no-new */
+
+router.beforeEach((to, from, next) => {
+  //NProgress.start();
+  if (to.path == '/Login') {
+    localStorage.removeItem('token');
+  }
+  let token = localStorage.getItem('token')
+  if (to.path == '/Login'){
+    next()
+  }else if (!token) {
+    next({ path: '/Login' })
+  } else {
+    next()
+  }
+})
+
+
 new Vue({
   el: '#app',
   router,
@@ -22,3 +41,4 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+

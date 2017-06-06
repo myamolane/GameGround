@@ -15,6 +15,8 @@ namespace GameGround.Entity
 
         public DateTime Birth { get; set; }
 
+        public string Email { get; set; }
+
         public virtual Account Account { get; set; }
 
         public virtual List<GameRecord> GameRecords { get; set; }
@@ -36,7 +38,7 @@ namespace GameGround.Entity.Mapping
 
             this.HasMany(m => m.GameRecords).WithRequired(m => m.Player).WillCascadeOnDelete(false);
             this.Property(m => m.Name).IsRequired().HasMaxLength(50);
-
+            this.Property(m => m.Email).IsRequired().HasMaxLength(64).IsUnique();
             this.HasMany(m => m.CollectedGames)
                 .WithMany(m => m.CollecttingPlayers)
                 .Map(table =>

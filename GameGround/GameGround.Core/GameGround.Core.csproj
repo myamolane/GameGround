@@ -64,7 +64,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Entity\Account.cs" />
     <Compile Include="Entity\Game.cs" />
     <Compile Include="Entity\KeyEntity.cs" />
@@ -73,11 +72,17 @@
     <Compile Include="Entity\Player.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IGameService.cs" />
+    <Compile Include="Service\ILogService.cs" />
+    <Compile Include="Service\IPlayerService.cs" />
+    <Compile Include="Service\IRecordService.cs" />
+    <Compile Include="ViewModel\Validator\PlayerValidator.cs" />
+    <Compile Include="ViewModel\VmAccount.cs" />
+    <Compile Include="ViewModel\VmGame.cs" />
+    <Compile Include="ViewModel\VmPlayer.cs" />
+    <Compile Include="ViewModel\VmRecord.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Service\" />
-    <Folder Include="ViewModel\Validator\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

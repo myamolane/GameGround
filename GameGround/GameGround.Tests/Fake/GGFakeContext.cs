@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Repository.Pattern.DataContext;
+using static GameGround.Tests.Fake.DbSets;
 
 namespace GameGround.Tests.Fake
 {
@@ -13,7 +14,8 @@ namespace GameGround.Tests.Fake
     {
         public GGFakeContext()
         {
-            //AddFakeDbSet<User, UserDbSet>();  
+            AddFakeDbSet<Account, AccountDbSet>();
+            AddFakeDbSet<Player, PlayerDbSet>();
         }
     }
 }

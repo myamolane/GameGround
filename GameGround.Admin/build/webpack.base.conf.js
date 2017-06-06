@@ -27,7 +27,6 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       'src': resolve('src'),
       'assets': resolve('assets'),
-      'components':resolve('components'),
       'views':resolve('views')
     }
   },

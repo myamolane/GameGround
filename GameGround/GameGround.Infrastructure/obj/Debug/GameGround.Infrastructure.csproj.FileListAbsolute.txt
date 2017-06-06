@@ -20,3 +20,7 @@ C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\bin\Debug\zh-Hans\E
 C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\obj\Debug\GameGround.Infrastructure.csprojResolveAssemblyReference.cache
 C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\obj\Debug\GameGround.Infrastructure.dll
 C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\obj\Debug\GameGround.Infrastructure.pdb
+C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\bin\Debug\FluentValidation.dll
+C:\WorkSpace\GameGround\GameGround\GameGround.Infrastructure\bin\Debug\FluentValidation.xml

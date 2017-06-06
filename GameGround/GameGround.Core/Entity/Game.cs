@@ -5,6 +5,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utility;
 
 namespace GameGround.Entity
 {
@@ -13,6 +14,7 @@ namespace GameGround.Entity
         public string Name { get; set; }
         public string Description { get; set; }
         public string Rule { get; set; }
+        public GameCategory Category { get; set; }
 
         [ForeignKey("Author")]
         public long AuthorId { get; set; }
@@ -21,7 +23,7 @@ namespace GameGround.Entity
         public virtual Game Game{get;set;}
         public virtual HeartGame HeartGame { get; set; }
     }
-    public class Game
+    public class Game : Repository.Pattern.Ef6.Entity
     {
         [ForeignKey("Info")]
         public long Id { get; set; }
@@ -33,7 +35,7 @@ namespace GameGround.Entity
 
         public virtual List<GameRecord> GameRecords { get; set; }
     }
-    public class HeartGame
+    public class HeartGame : Repository.Pattern.Ef6.Entity
     {
         [ForeignKey("Info")]
         public long Id { get; set; }

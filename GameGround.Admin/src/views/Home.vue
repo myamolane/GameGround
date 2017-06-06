@@ -1,44 +1,93 @@
 <template>
-    <div class="container">
-        <div>
-        <el-col :span="24" class="menu">
-            <el-menu theme="dark" :default-active="activeIndex" 
-            class="el-menu-demo" mode="horizontal" @select="handleSelect"
-            unique-opened="true">
-                <el-menu-item index="1">处理中心</el-menu-item>
-                <el-submenu index="2">
-                    <template slot="title">我的工作台</template>
-                    <el-menu-item index="2-1">选项1</el-menu-item>
-                    <el-menu-item index="2-2">选项2</el-menu-item>
-                    <el-menu-item index="2-3">选项3</el-menu-item>
-                </el-submenu>
-                <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-            </el-menu>           
-        </el-col>            
-        </div>
+    <div>
+        <el-row>
+        <el-col :span="17">
+        <el-tabs v-model="filter.category" type="card" @tab-click="handleClick">
+            <el-tab-pane label="所有分类" >
+
+            </el-tab-pane>
+            <el-tab-pane label="休闲" name="1">
+                
+            </el-tab-pane>
+            <el-tab-pane label="赛车" name="2">
+                
+            </el-tab-pane>
+            
+        </el-tabs>
+        </el-col>
+        <el-col :span="6">
+        <el-input placeholder="游戏名称" icon="search"></el-input>
+        </el-col>
+        </el-row>
+        <el-row>
+        
+            <GameTemplate v-for="(game,index) in games" :keys="game.Id" v-bind:game="game"/>
+            
+
+            
+        </el-row>
+        <el-row>
+        <el-pagination class="pagination" @current-change="handleCurrentChanged"
+            :current-page.sync="this.filter.page" :page-size="pageSize" layout="total,prev,pager,next"
+            :total="total"/>
+        </el-row>
     </div>
 </template>
-<style scoped lang="scss">
-    .container{
-        background-color:#EFF2F7;
-        width:100%;
-        height:100%;
-        position:absolute;
-    }
-    
-</style>
 <script>
-  export default {
-    data() {
-      return {
-        activeIndex: '1',
-        activeIndex2: '1'
-      };
-    },
-    methods: {
-      handleSelect(key, keyPath) {
-        console.log(key, keyPath);
-      }
+    import Vue from 'vue'
+    import {mapGetters, mapActions, mapState} from 'vuex'
+    import GameTemplate from 'src/components/Game'
+    export default {
+        components:{
+            GameTemplate
+        },
+        data(){
+         return {
+            filter: {
+                category: '',
+                name:'',
+                page:1
+            },
+            total:0,
+            pageSize:20
+        }
+        },
+        mounted(){
+            this.searchGames(this.filter)
+        },
+        computed: {
+            ...mapGetters({
+                games:'games',
+                totalGames:'totalGames'
+            })
+        },
+        methods:{
+            ...mapActions({
+                searchGames:'searchGames'
+            }),
+            search(){
+                this.searchGames(this.filter)
+                this.total=this.totalGames
+            },
+            handleClick(){
+                this.filter.page=1
+                this.search(this.filter)
+            },
+            handleCurrentChanged(){
+                this.search(this.filter)
+            },
+            getSrc(name){
+                return "/static/img/"+name+".png"
+            }
+        }
     }
-  }
 </script>
+<style scoped lang="scss">
+    .el-input{
+        margin: 5px;
+    }
+    .el-pagination{
+        margin:10px;
+        float:right;
+    }
+</style>

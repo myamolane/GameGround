@@ -14,21 +14,20 @@ Vue.http.options.xhr = {
 //MIME(Multipurpose Internet Mail Extensions)
 Vue.http.options.emulateJSON = true
 //拦截器
-// Vue.http.interceptors.push((request, next) => {
-//   request.headers = request.headers || {}
-//   let token = localStorage.getItem('token')
-//   request.headers.set('Authorization', 'Bearer ' + token)
-//   request.headers.set('Accept', 'application/json')
-//   //请求发送后的处理逻辑
-//   next((response) => {
-//     if (response.status === 401) {
-//       localStorage.removeItem('token')
-//       location.reload()
-//     }    
+Vue.http.interceptors.push((request, next) => {
+  request.headers = request.headers || {}
+  let token = localStorage.getItem('token')
+  request.headers.set('Authorization', 'Bearer ' + token)
+  request.headers.set('Accept', 'application/json')
+  //请求发送后的处理逻辑
+  next((response) => {
+    if (response.status === 401) {
+      localStorage.removeItem('token')
+      location.reload()
+    }    
+    return response
+  })
     
-//     return response
-//   })
-    
-// })
+})
 
 export default Vue

@@ -12,6 +12,19 @@ namespace Utility
     }
     public enum Sex
     {
-        
+        Female,
+        Male
+    }
+    public enum GameCategory
+    {
+        All,
+        Relax,
+        Car
+    }
+    public enum GameResult
+    {
+        lose,
+        equal,
+        win
     }
 }

@@ -62,18 +62,24 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\CyclicBuffer.cs" />
+    <Compile Include="Service\GameService.cs" />
+    <Compile Include="Service\PlayerService.cs" />
+    <Compile Include="Service\RecordService.cs" />
+    <Compile Include="Service\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\GameGround.Core\GameGround.Core.csproj">
       <Project>{95F77C94-5192-47F8-B4B9-2CA49318A00B}</Project>
       <Name>GameGround.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{DB98892C-1C9D-49C0-9DF8-A4E187429D2C}</Project>
+      <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

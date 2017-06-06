@@ -5,6 +5,7 @@
             <span>&nbsp</span>
         </el-col>
         <el-col :xs="14" :sm="12" :md="10" :lg="8">
+            
             <h1>
                 <router-link to="NiceToMeetU">Join in</router-link>
                 <br/>
@@ -12,17 +13,17 @@
                 <br/>
                 We will make your life lighter
             </h1>
-        <el-form>
+        <el-form ref="loginForm">
             <el-col :lg="4" :md="3" :sm="2">
                 <span>&nbsp</span>
             </el-col>
             <el-col :lg="16" :md="18" :sm="20">
                 <div class="login-div">
-                    <el-form-item>
-                        <el-input class="login-input" type="text" placeholder="Your user name"/>
+                    <el-form-item prop="login">
+                        <el-input ref="userInput" class="login-input" v-model="loginForm.login" type="text" placeholder="Your user name"/>
                     </el-form-item>
-                    <el-form-item>
-                        <el-input class="login-input" type="text" placeholder="Your password"/>
+                    <el-form-item prop="password">
+                        <el-input class="login-input" v-model="loginForm.password" type="password" placeholder="Your password"/>
                     </el-form-item>            
                 </div>
             </el-col> 
@@ -42,9 +43,20 @@
 <script>
     import Vue from 'vue'
     import {mapGetters, mapActions, mapState} from 'vuex'
+    import md5 from 'md5'
     export default {
+        data(){
+         return {
+            loginForm: {
+                login: "",
+                password: ""
+            }
+
+        }
+        },
         mounted(){
             document.onkeyup=this.handleKeyUp;
+            
         },
         computed: {
             ...mapGetters({
@@ -53,21 +65,34 @@
         },
         methods:{
             ...mapActions({
-                test: 'test'
+                login : "login",
+                test : "test"
             }),
             handleKeyUp(){
                 if (event.key==="Enter")
                 {
-                    alert("test")
-                    this.test()
-                    this.$router.push('GameGround')
-                       
+                    //this.test()
+                    console.log(this.message)
+                    //this.$router.push('GameGround')
+                    var params = {
+                        form: this.loginForm,
+                        callback: (errorMessage) => {
+                            //that.logining = false
+                            if(!errorMessage) {
+                                this.$router.push('GameGround')
+                            }
+                            else
+                                this.$message({
+                                    showClose: true,
+                                    message: errorMessage,
+                                    type: 'error'
+                                });
+                        } 
+                    }
+                    params.form.password=md5(params.form.password)
+                    this.login(params)
                 }
-            },
-            handleClick(){
-                alert("click");
             }
-
         }
     }
 </script>
@@ -108,5 +133,6 @@
     .login-input{
         border:0px;
     }
+    
 
 </style>

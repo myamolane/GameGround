@@ -1,11 +1,12 @@
 ﻿using GameGround.Entity;
 using GameGround.Entity.Mapping;
+using Repository.Pattern.Ef6;
 using System;
 using System.Data.Entity;
 using System.Linq;
 namespace GameGround.Infrastructure
 {
-    public class GGContext : DbContext
+    public class GGContext : DataContext
     {
         //您的上下文已配置为从您的应用程序的配置文件(App.config 或 Web.config)
         //使用“GGContext”连接字符串。默认情况下，此连接字符串针对您的 LocalDb 实例上的
@@ -17,7 +18,7 @@ namespace GameGround.Infrastructure
             : base("name=GGContext")
         {
 
-            Database.SetInitializer(new DropCreateDatabaseAlways<GGContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<GGContext>());
         }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Game> Games { get; set; }

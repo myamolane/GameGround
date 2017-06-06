@@ -10,8 +10,7 @@ namespace Utility
         public static string Md5Encrypt(this string input)
         {
             if (string.IsNullOrEmpty(input)) return string.Empty;
-
-            byte[] bytes = Encoding.UTF7.GetBytes(input);
+            byte[] bytes = Encoding.UTF8.GetBytes(input);
             bytes = cryptoProvider.ComputeHash(bytes);
             StringBuilder sb = new StringBuilder();
             foreach (byte num in bytes)

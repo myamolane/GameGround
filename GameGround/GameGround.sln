@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGround.Portal", "GameGround\GameGround.Portal.csproj", "{897C3682-F23D-4660-BE6A-89491DBD5B04}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{CB5DBB3D-6CAF-48CE-8539-8892168B456A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameGround.Api", "GameGround.Api\GameGround.Api.csproj", "{5B16C054-D211-4ED2-AAA4-A1FFCA235429}"
@@ -29,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{897C3682-F23D-4660-BE6A-89491DBD5B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{897C3682-F23D-4660-BE6A-89491DBD5B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{897C3682-F23D-4660-BE6A-89491DBD5B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{897C3682-F23D-4660-BE6A-89491DBD5B04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B16C054-D211-4ED2-AAA4-A1FFCA235429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B16C054-D211-4ED2-AAA4-A1FFCA235429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B16C054-D211-4ED2-AAA4-A1FFCA235429}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,7 +52,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{897C3682-F23D-4660-BE6A-89491DBD5B04} = {CB5DBB3D-6CAF-48CE-8539-8892168B456A}
 		{5B16C054-D211-4ED2-AAA4-A1FFCA235429} = {CB5DBB3D-6CAF-48CE-8539-8892168B456A}
 		{DB98892C-1C9D-49C0-9DF8-A4E187429D2C} = {E75E8903-5240-4FE8-8FD4-9BC4503FE550}
 		{4EFC95D6-7EC0-42C1-996C-F71FED51B240} = {7694C73F-552D-40A9-A2E0-A36C9BEC7E1F}

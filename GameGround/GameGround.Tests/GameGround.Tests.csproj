@@ -47,6 +47,18 @@
       <HintPath>..\packages\LINQKit.1.1.1\lib\net45\LinqKit.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="Repository.Pattern, Version=3.3.5.1, Culture=neutral, PublicKeyToken=e598640c26ef2b0a, processorArchitecture=MSIL">
       <HintPath>..\packages\Repository.Pattern.3.3.5.1\lib\net451\Repository.Pattern.dll</HintPath>
       <Private>True</Private>
@@ -73,13 +85,29 @@
   <ItemGroup>
     <Compile Include="Fake\DbSets.cs" />
     <Compile Include="Fake\GGFakeContext.cs" />
+    <Compile Include="Service\GameServiceTest.cs" />
+    <Compile Include="Service\PlayerServiceTest.cs" />
+    <Compile Include="Service\TestServiceBase.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GameGround.Api\GameGround.Api.csproj">
+      <Project>{5B16C054-D211-4ED2-AAA4-A1FFCA235429}</Project>
+      <Name>GameGround.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GameGround.Core\GameGround.Core.csproj">
       <Project>{95f77c94-5192-47f8-b4b9-2ca49318a00b}</Project>
       <Name>GameGround.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameGround.Infrastructure\GameGround.Infrastructure.csproj">
+      <Project>{4efc95d6-7ec0-42c1-996c-f71fed51b240}</Project>
+      <Name>GameGround.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{db98892c-1c9d-49c0-9df8-a4e187429d2c}</Project>
+      <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
